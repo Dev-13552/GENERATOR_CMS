@@ -1,11 +1,3 @@
-import {
-  expandContent,
-  generateArticle,
-  generateSeoContent,
-  rewriteContent,
-  shortenContent,
-} from "../../../../../frontend/src/services/content";
-
 export const IMAGE_RESOLUTION = [
   { value: "512x512", label: "512 x 512 (Square)" },
   { value: "1024x1024", label: "1024 x 1024 (Square)" },
@@ -36,7 +28,6 @@ export const PAGES = {
     "output-subheader": "Your rewritten content will appear here",
     "output-form-action":
       "Fill out the form and click rewrite to generate new content",
-    handler: rewriteContent,
   },
   expand: {
     header: "Expand content",
@@ -49,7 +40,6 @@ export const PAGES = {
     "output-subheader": "Your expanded content will appear here",
     "output-form-action":
       "Fill out the form and click expand to generate new content",
-    handler: expandContent,
   },
 
   shorten: {
@@ -63,7 +53,6 @@ export const PAGES = {
     "output-subheader": "Your shorten content will appear here",
     "output-form-action":
       "Fill out the form and click shorten to generate new content",
-    handler: shortenContent,
   },
 
   "generate-article": {
@@ -77,7 +66,6 @@ export const PAGES = {
     "output-subheader": "Your article will appear here",
     "output-form-action":
       "Fill out the form and click generate to create new articles",
-    handler: generateArticle,
   },
   "seo-content": {
     header: "SEO content generator",
@@ -91,6 +79,5 @@ export const PAGES = {
     "output-subheader": "Your SEO content will appear here",
     "output-form-action":
       "Fill out the form and click generate to generate SEO content",
-    handler: generateSeoContent,
   },
 };

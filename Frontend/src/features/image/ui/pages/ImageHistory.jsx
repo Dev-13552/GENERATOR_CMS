@@ -6,7 +6,6 @@ import {
   ImageIcon,
   LoadingIcon,
 } from "../../../../shared/ui/components/Icons";
-import api from "../../../../config/api";
 import { useEffect } from "react";
 import { useImage } from "../../hook/useImage";
 
