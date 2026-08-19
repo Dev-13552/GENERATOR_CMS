@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ["http://localhost:5173", "https://gen-ai-project-tau.vercel.app"],
+    origin: ["http://localhost:5173", "https://generator-cms.vercel.app"],
     credentials: true
 }))
 app.use(express.json());
