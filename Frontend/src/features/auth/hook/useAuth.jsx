@@ -56,7 +56,7 @@ export const useAuth = (isLogin) => {
     try {
         setLoading(true);
         const response = await registerApi(data);
-        if(response.success){
+        if(response?.success){
             navigate("/");
         }
     } catch (error) {
@@ -69,7 +69,7 @@ export const useAuth = (isLogin) => {
   const loginFormSubmitHandler = async (data) => {
     try {
         const response = await loginApi(data);
-        if(response.success){
+        if(response?.success){
             setUser(response.user);
         localStorage.setItem("token", response.token);
         navigate("/main");
