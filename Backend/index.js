@@ -3,6 +3,7 @@ import "dotenv/config";
 import cors from "cors";
 import router from "./routes/v1/index.js";
 import { dbConnect } from "./config/database.js";
+import { errorHandler } from "./middlewares/error.middleware.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -10,6 +11,8 @@ app.use(cors({
     origin: ["http://localhost:5173", "https://generator-cms.vercel.app"],
     credentials: true
 }))
+
+
 app.use(express.json());
 app.use("/v1", router);
 
@@ -22,6 +25,8 @@ app.use((req, res) => {
     message: "Route not found",
   });
 });
+
+app.use(errorHandler)
 
 app.listen(port, () => {
   dbConnect();
