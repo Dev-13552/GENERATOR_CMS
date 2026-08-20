@@ -5,7 +5,6 @@ export const reWriteContentAPI = async (prompt) => {
     const response = await ai.interactions.create({
       model: "gemini-2.5-flash",
       input: prompt,
-
     });
     return response.output_text;
   } catch (error) {
